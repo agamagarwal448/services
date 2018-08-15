@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="./angular.min.js">
+</script>
+</head>
+<body>
+	<div ng-app="myApp" ng-controller="myCtrl">
+    {{fname}}
+    <table border="1px">
+    	<tr ng-repeat="user in users">
+    		<td>{{user.id}}</td>
+    		<td>{{user.fname}}</td>
+    		<td>{{user.lname}}</td>
+    		<td>{{user.age}}</td>
+    		<td>{{user.email}}</td>
+    		<td>
+    		<span ng-click="viewUser(user.id)">view</span> 
+    		<div ng-click="editUser(user.id)">edit</span>
+    	    <p ng-click="deleteuser(user.id)">delete</p>
+    		</td>
+    	</tr>
+    </table>
+    <br/>
+        
+        <button ng-click="createUser()"> Create User</button>
+        {{userInfo}}
+
+	</div>
+	<script type="text/javascript" src="./app1.js"></script>
+	<script type="text/javascript" src='./controller1.js'></script>
+	
+</body>
+</html>
